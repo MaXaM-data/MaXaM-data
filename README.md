@@ -63,5 +63,6 @@ Currently focusing on:
 
 ## 📫 Contact
 
-- 💼 LinkedIn: *[https://www.linkedin.com/in/max-lee-21b61239a/](url)*  
+- 💼 LinkedIn: [max-lee-21b61239a](https://www.linkedin.com/in/max-lee-21b61239a/)
+  
 - 📧 Email: *maxam.data@gmail.com*  
