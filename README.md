@@ -1,68 +1,63 @@
 # Hi, I'm Max 👋
 
-Early-career **Data Analyst** with a background in **compliance-heavy government operations**.  
-I like turning messy operational data (SLAs, risks, caseloads, shipping, etc.) into clean, auditable dashboards in **Power BI** – with a bit of **Python** when privacy or data cleaning is involved.
+Aspiring **Data Engineer** with a background in **compliance-heavy UK public sector operations**.  
+I’m focused on building **reliable, repeatable data pipelines** — ingest → clean → validate → publish — and using **Power BI** as the final consumer layer to show the data is usable.
 
-- 🔎 Interested in: operational analytics, Cyber GRC, supply chain / logistics, public sector data
-- 🏛️ Day job: working in the UK public sector on caseloads, risk and compliance
-- 🎓 Studying towards: **PL-300 (Power BI Data Analyst)**
+I’m especially interested in data roles that support **health and social care outcomes**, where data quality, governance and auditability really matter.
+
+- 🔎 Interested in: data pipelines, data quality, monitoring, governance-aware delivery, public sector / health data
+- 🏛️ Day job: UK public sector role involving evidence checks, risk, and audit trails
+- 🎓 Studying towards: **PL-300 (Power BI Data Analyst)** to strengthen the reporting layer (alongside pipeline work)
 
 ---
 
 ## 🔧 Tech & Tools
 
-- **Languages:** SQL (joins/filters/aggregations), Python (`pandas` for cleaning & simple ETL), DAX  
-- **Analytics & BI:** Power BI (Power Query, data modelling, KPIs, time intelligence), Excel  
-- **Cloud & Governance:** Azure Fundamentals (AZ-900), Data Fundamentals (DP-900), APM PFQ  
-- **Data themes:** SLA monitoring, risk scoring, GDPR-aware reporting, star schema modelling
+- **Python:** `pandas` for ingestion/cleaning, column-level controls, basic QA checks (row/column counts, null checks)
+- **SQL:** joins, filters, aggregations (for extraction and validation)
+- **BI / Consumer layer:** Power BI (Power Query, modelling, DAX) to validate outputs and communicate insights
+- **Cloud fundamentals:** AZ-900, DP-900
+- **Engineering themes:** staging vs publish, repeatability, validation, documentation, privacy-aware preparation
 
 ---
 
-## 📊 Portfolio Projects
+## 📦 Portfolio Projects
 
-### 1. Cyber GRC Risk Monitor
+### 1) Vulnerability Risk Monitor (Portfolio Project)
 
-> Power BI dashboard for tracking **vulnerability SLAs**, **breach rate** and **critical server risk**.
+> A “pipeline to dashboard” project: model findings data cleanly and surface reliable operational metrics.
 
 - Built on a vulnerability scan–style dataset (Kaggle).
-- Star schema with `Fact_Findings` + dimensions for assets, vulnerabilities, severity, teams and dates.
-- Page 1: **Enterprise Vulnerability Risk Monitor** – KPIs for open vulns, SLA breach count/rate, critical servers; SLA breaches by department; severity mix.
-- Page 2: **Server Vulnerability Details** – server-level table (CVSS, OS, days open) with slicers and a treemap of **top attack vectors**.
-- Designed so **row-level security by department** can be added for real-world use.
+- Modelled the data into a star schema (`Fact_Findings` + dimensions for assets, severity, teams, dates) to support stable reporting.
+- Built measures for ageing (days open), breach-style service targets, and critical-item counts.
+- Designed so **Row-Level Security (RLS)** could be added by department in a real environment.
 
-🔗 **Repo:** [Cyber GRC Risk Monitor](https://github.com/MaXaM-data/cyber-grc-risk-monitor)
+🔗 Repo: https://github.com/MaXaM-data/cyber-grc-risk-monitor
 
 ---
 
-### 2. Global Supply Chain & Logistics Dashboard
+### 2) Global Supply Chain & Logistics Dashboard
 
-> End-to-end project combining **Python (pandas)** for PII anonymisation with **Power BI** for SLA & margin analysis.
+> Demonstrates a simple, repeatable **privacy-aware preparation step** + QA, then a reporting layer.
 
 - Uses the **DataCo Supply Chain** dataset (~180k orders).
-- Python script to strip **customer PII** (emails, names, addresses, passwords) and export a GDPR-style anonymised CSV.
-- Star schema in Power BI with `Fact_Orders` + dimensions for customer, product, geography, shipping mode and date.
-- **Page 1 – SLA & Margin Overview**
-  - KPIs: Total Orders, Total Sales, Total Profit, Late Delivery Risk %, Net Profit Margin, Avg Days to Ship.
-  - Late Delivery Risk % by Shipping Mode, Net Profit Margin by Market, SLA risk over time.
-- **Page 2 – Commercial Insights & Profit Analysis**
-  - Shows that **Same Day shipping is the least profitable mode globally**.
-  - Quantifies that in **LATAM**, late deliveries earn ~**7% less profit per order** than on-time shipments.
-  - Order volume & shipping mode mix by market to give context.
+- Python script removes **direct identifiers** (e.g., names/emails/addresses/passwords) and exports a **PII-reduced** CSV for analysis.  
+  **Note:** This is **not** a claim of full anonymisation or formal GDPR compliance — it’s a practical data-minimisation step for a portfolio project.
+- Added basic QA checks (row/column counts before vs after) to confirm records weren’t accidentally filtered during cleaning.
+- Built a star schema in Power BI (`Fact_Orders` + dimensions for customer, product, geography, shipping mode, date) and measures for delivery/service metrics and profitability.
 
-🔗 **Repo:** [Global Supply Chain & Logistics Dashboard](https://github.com/MaXaM-data/global-supply-chain-logistics-dashboard)
+🔗 Repo: https://github.com/MaXaM-data/global-supply-chain-logistics-dashboard
 
 ---
 
-Currently focusing on:
+## What I’m building next
 
-- Deepening **Power BI + DAX** (time intelligence, advanced modelling)
-- Using **Python + pandas** for data cleaning, anonymisation and simple ETL workflows
-- Building more **domain-relevant projects** around risk, SLAs and public sector operations
+- Stronger **data quality checks** (e.g., null-rate thresholds, schema checks, duplicate checks)
+- A small “orchestration-style” pattern (staging → validate → publish) to simulate real pipelines
+- Learning production concepts with guidance: incremental loads, monitoring/alerts, and incident handling
 
 ---
 
 ## 📫 Contact
-
-- 💼 LinkedIn: [max-lee-21b61239a](https://www.linkedin.com/in/max-lee-21b61239a/)
-  
-- 📧 Email: *maxam.data@gmail.com*  
+- LinkedIn: https://www.linkedin.com/in/max-lee-21b61239a/
+- Email: maxam.data@gmail.com
